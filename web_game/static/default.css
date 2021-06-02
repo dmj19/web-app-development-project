@@ -1,0 +1,163 @@
+
+:root
+{
+    --banner-height : 80px;
+    --nav-width: 500px; 
+    --font-size: 11pt;
+}
+
+
+body {
+    font-family: "Arial", sans-serif;
+    font-size: var(--font-size);
+    background-color: lightsteelblue;
+    height: 100%; 
+    width: 100%;  
+    position: absolute;
+    margin: 0;
+}
+
+header { 
+    background-color: lightsteelblue;
+    height: var(--banner-height);
+    margin: 15px;
+    width: 100%; 
+    position: absolute; 
+}
+
+main { 
+    background-color: whitesmoke;
+    width: calc(100% - var(--nav-width)) ;
+    height: calc(100% - var(--banner-height)) ;
+    position: absolute; 
+    top: var(--banner-height);
+    left: var(--nav-width);
+    border-radius: 15px;
+}
+
+nav {
+    background-color: tomato;
+    border-radius: 15px;
+    position: absolute;
+    height: calc(100% - var(--banner-height)) ;
+    width: var(--nav-width);
+    top: var(--banner-height);
+}
+
+
+nav ul {
+    display: inline-block; 
+    margin: 7px;
+    padding: 20px;
+    list-style-type: none;
+    background-color: white;
+    border-radius: 5px;
+}
+
+nav li{
+    text-align: center;
+    margin: 5px 0;
+
+}
+
+#A{
+    border-style: none;
+}
+
+#top-combos {
+    border-style: none;
+}
+
+#Player-One{
+    border-style: none;
+}
+
+.container{
+    text-align: center;
+    width: 80%;
+    margin: 30px;
+    background-color: white;
+    border: 15px solid lightsteelblue;
+    border-style: double;
+    border-radius: 10px;
+    padding: 15px ;
+
+}
+.cells li{
+    border: 1px solid;
+    border-radius: 5px;
+    border-collapse: separate; 
+    border-spacing: 15px  ;
+}
+
+.combo-row li{
+    border: 1px solid white; 
+    border-radius: 5px;
+    border-collapse: separate; 
+    border-spacing: 15px 50px  ;
+    text-align: left;
+}
+
+.dice{
+    display: inline-block;
+    width: 15%; 
+    text-align: center;
+}
+
+img{
+    width: 100%
+}
+
+button{
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    text-transform: capitalize;
+}
+
+h2{
+    text-align: center;
+}
+h3 {
+    text-align: center;
+    text-decoration: underline;
+    border-style: none;
+    border-radius: 15px;
+}
+
+h4{
+    text-align: center;
+}
+
+h5{
+    text-align: center;
+}
+
+/* .mystyle {
+    width: 100%;
+    padding: 25px;
+    border: 15px solid slateblue; 
+    border-style: double;
+    color: white;
+  } */
+
+
+
+
+
+
+
+
+
+
+/* nav table {
+    font-family: "Arial" , "Helvetica", sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+      }
+    nav.scoreboard td, nav.scoreboard th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+    
+} */

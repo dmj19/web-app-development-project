@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en-gb">
+<meta charset="utf-8">
+<title>Chat with Robots!</title>
+<link rel="stylesheet" href="default.css">
+<link rel="shortcut icon" href="favicon.png">
+<script type="module" src="main.js"></script>
+
+<!-- HEADER TEXT -->
+<header>
+    <h1>       YAHTZEE And Friends ! 🎲</h1>
+</header>
+
+<!-- MAIN BODY OF TEXT -->
+<main>
+    <button id="roll-button" onclick="dice_roll_change()">Click here to roll the dice</button> 
+    <div class= "container"> 
+        <div class = "dice">
+            <p>Dice 1</p>
+            <input class="dice_icons" type="image" name="Dice_1" id="1" src="dice_images/Dice_6.png" width="100" height="100" alt="text"/>
+            <button class= "answer_btns" id="btn_1" >KEEP</button>
+        </div>
+        <div class = "dice">
+            <p>Dice 2</p>
+            <img class= "img2" src= "dice_images/Dice_6.png">
+            <button  type= "button" class="answer_btns" id="btn_2" onclick="onClick() ">KEEP</button>
+        </div>
+        <div class = "dice">
+            <p>Dice 3</p>
+            <img class= "img2" src= "dice_images/Dice_6.png">
+            <button class="answer_btns" id="btn_3">KEEP</button>
+        </div>
+        <div class = "dice">
+            <p>Dice 4</p>
+            <img class= "img2" src= "dice_images/Dice_6.png">
+            <button class="answer_btns" id="btn_4">KEEP</button>
+        </div>
+        <div class = "dice">
+            <p>Dice 5</p>
+            <img class= "img2" src= "dice_images/Dice_6.png">
+            <button class="answer_btns" id="btn_5">KEEP</button>
+        </div>
+    </div>
+    <h4> Select Dice You Want to Keep</h4>
+    <h5 id="roll-count"> 3 Rolls Left!</h5>
+</main>
+
+<!--NAV TEXT -->
+<nav>
+    <h2> SCORE BOARD</h2>
+    <ul id= "top-combos">
+        </li><h3>Combos:</h3></li>
+        <div class= "combo-row"> 
+            <li>Ones</li>
+            <li>Twos</li>
+            <li>Threes</li>
+            <li>Fours</li>
+            <li>Fives</li>
+            <li>Sixes</li>
+            <li>SUM</li>
+            <li>BONUS</li>
+            <li>3 of a Kind</li>
+            <li>4 of a Kind</li>
+            <li>Full House</li>
+            <li>Small Straight</li>
+            <li>Large Straight</li>
+            <li>Chance</li>
+            <li>YAHTZEE</li>
+            <li>TOTAL</li>
+        </div>
+    </ul>
+    
+    <ul id= "Player-One">
+        </li><h3>Player One</h3></li>
+        <div class= "cells">
+            <li>Ones-P1</li>
+            <li>Twos-P1</li>
+            <li>Threes-P1</li>
+            <li>Fours-P1</li>
+            <li>Fives-P1</li>
+            <li>Sixes-P1</li>
+            <li>SUM-P1</li>
+            <li>BONUS-P1</li>
+            <li>3 of a Kind-P1</li>
+            <li>4 of a Kind-P1</li>
+            <li>Full House-P1</li>
+            <li>Small Straight-P1</li>
+            <li>Large Straight-P1</li>
+            <li>Chance-P1</li>
+            <li>YAHTZEE-P1</li>
+            <li>TOTAL-P1</li>
+        </div>
+    </ul>
+    <ul id= "Player-Two">
+        </li><h3>Player Two</h3></li>
+        <div class= "cells"> 
+            <li>Ones-P2</li>
+            <li>Twos-P2</li>
+            <li>Threes-P2</li>
+            <li>Fours-P2</li>
+            <li>Fives-P2</li>
+            <li>Sixes-P2</li>
+            <li>SUM-P2</li>
+            <li>BONUS-P2</li>
+            <li>3 of a Kind-P2</li>
+            <li>4 of a Kind-P2</li>
+            <li>Full House-P2</li>
+            <li>Small Straight-P2</li>
+            <li>Large Straight-P2</li>
+            <li>Chance-P2</li>
+            <li>YAHTZEE-P2</li>
+            <li>TOTAL-P2</li>
+        </div>
+    </ul>
+</nav>
+
+
+
+
+
+
+
+
+
+<!-- <table  id="scoreboard" style="width:100%">
+    <tr>
+      <th>Top Combos</th>
+      <th>Player One</th> 
+      <th>Player Two</th>
+    </tr>
+    <tr>
+      <th>Ones</td>
+      <td>P1 SCORE</td>
+      <td>P2 SCORE</td>
+    </tr>
+    <tr>
+      <th>Twos</td>
+      <td>P1 SCORE</td>
+      <td>P2 SCORE</td>
+    </tr>
+    <tr>
+      <th>Threes</td>
+      <td>P1 SCORE</td>
+      <td>P2 SCORE</td>
+    </tr>
+  </table> -->
