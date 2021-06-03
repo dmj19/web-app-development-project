@@ -50,7 +50,7 @@ Yahtzee.onClick= () => {
 return stored_clicks[one_clicks,two_clicks,three_clicks,four_clicks,five_clicks]
 };
 
-Yahtzee.storeClicks=number) => {
+Yahtzee.storeClicks=(number) => {
     if (number%2 !=0 || number!=0) {
         Yahtzee.selected_dice_set.push(number)
     };
