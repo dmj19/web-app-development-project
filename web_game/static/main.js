@@ -1,4 +1,4 @@
-import Yahtzee from "./game_yahtzee.js";
+import SCC from "./scc_game.js";
 
 const roll_button = document.getElementById("roll-button");
 const roll_count= document.getElementById("roll-count");
@@ -12,7 +12,7 @@ roll_button.onclick = function() {
     console.log("Clicked the button");
 };
 
-Yahtzee.button_heading_count =() => {
+SCC.button_heading_count =() => {
     if ((roll_number % 3 ==0) || roll_number==(0)); {
         document.querySelector('h5').innerHTML= '3 rolls left'
     };
@@ -36,7 +36,7 @@ dice_btn1.onclick = function(){
 
 var clicks = 0;
 
-Yahtzee.onClick= () => {
+SCC.onClick= () => {
     one_clicks +=1;
     two_clicks += 1;
     three_clicks += 1;
@@ -50,7 +50,7 @@ Yahtzee.onClick= () => {
 return stored_clicks[one_clicks,two_clicks,three_clicks,four_clicks,five_clicks]
 };
 
-Yahtzee.storeClicks=(number) => {
+SCC.storeClicks=(number) => {
     if (number%2 !=0 || number!=0) {
         Yahtzee.selected_dice_set.push(number)
     };
