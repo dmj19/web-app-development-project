@@ -9,10 +9,12 @@ const second_dice_set ={
 }; 
 
 const Dice_One_numbers= "dice_images/Dice_"+random_int_6+".png";
-const Dice_Two_numbers= "dice_images/Dice_"+random_int_7+".png";
+var Dice_Two_numbers= "dice_images/Dice_"+random_int_7+".png";
 const Dice_Three_numbers= "dice_images/Dice_"+random_int_8+".png";
 const Dice_Four_numbers= "dice_images/Dice_"+random_int_9+".png";
 const Dice_Five_numbers= "dice_images/Dice_"+random_int_10+".png"; 
 
+document.querySelector('.answer_btns').setAttribute('src', Dice_Two_numbers); 
 
-console.log(second_dice_set);
+
+// console.log(second_dice_set);

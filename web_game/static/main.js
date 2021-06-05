@@ -12,6 +12,10 @@ roll_button.onclick = function() {
     console.log("Clicked the button");
 };
 
+dice_btn2.onclick = function() { 
+    console.log("CLICKED IT"); 
+}; 
+
 SCC.button_heading_count =() => {
     if ((roll_number % 3 ==0) || roll_number==(0)); {
         document.querySelector('h5').innerHTML= '3 rolls left'
@@ -27,16 +31,13 @@ return roll_count
 
 //changing dice on click 
 
-dice_btn1.onclick = function(){ 
-    console.log("CLICKED IT")
-}
 
 
 // counting click number of dice selected 
 
 var clicks = 0;
 
-SCC.onClick= () => {
+onClick= () => {
     one_clicks +=1;
     two_clicks += 1;
     three_clicks += 1;
@@ -50,12 +51,12 @@ SCC.onClick= () => {
 return stored_clicks[one_clicks,two_clicks,three_clicks,four_clicks,five_clicks]
 };
 
-SCC.storeClicks=(number) => {
-    if (number%2 !=0 || number!=0) {
-        Yahtzee.selected_dice_set.push(number)
-    };
-    return selected_dice_set
-};
+// SCC.storeClicks=(number) => {
+//     if (number%2 !=0 || number!=0) {
+//         Yahtzee.selected_dice_set.push(number)
+//     };
+//     return selected_dice_set
+// };
 
 
 

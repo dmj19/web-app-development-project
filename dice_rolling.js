@@ -1,5 +1,9 @@
 
+//CHANGE DICE TO ICONS HTML
 
+{/* <div class = "dice">
+            <p>Dice 1</p>
+            <input class="dice_icons" type="image" name="Dice_1" id="1" src="dice_images/Dice_6.png" width="100" height="100" alt="text"/> */}
 
 // const dice_set = {
 //     random_int_1: 1, 
