@@ -8,6 +8,8 @@ const dice_btn3= document.getElementById("btn_3");
 const dice_btn4= document.getElementById("btn_4");
 const dice_btn5= document.getElementById("btn_5");
 
+
+
 roll_button.onclick = function() {
     console.log("Clicked the button");
 };
@@ -16,7 +18,9 @@ dice_btn2.onclick = function() {
     console.log("CLICKED IT"); 
 }; 
 
-SCC.button_heading_count =() => {
+
+
+button_heading_count =() => {
     if ((roll_number % 3 ==0) || roll_number==(0)); {
         document.querySelector('h5').innerHTML= '3 rolls left'
     };
