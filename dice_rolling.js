@@ -5,21 +5,10 @@
             <p>Dice 1</p>
             <input class="dice_icons" type="image" name="Dice_1" id="1" src="dice_images/Dice_6.png" width="100" height="100" alt="text"/> */}
 
-// const dice_set = {
-//     random_int_1: 1, 
-//     random_int_2: 1,
-//     random_int_3: 1,
-//     random_int_4: 1,
-//     random_int_5: 1,
-// };
+// const random_int= Math.floor(Math.random() * 6)+1;
 
-// scc_game.filled_dice_set = function(dice_set) {
-//     // for (var i in obj) {
-//     for (var i=1; i<=5; i++) {
-//         scc_game.dice_set["random_int_" + i] = random_int;
-//     }; 
-// return dice_set
-// };
+
+// console.log(filled_dice_set())
 
 //     for (var i=0; i<=(6-dice_set.length); i++) {
 //         // dice_roll("ROLLDICEBUTTON")

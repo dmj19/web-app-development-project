@@ -1,4 +1,4 @@
-import SCC from "./scc_game.js";
+import SCC from "../../scc_game.js";
 
 const roll_button = document.getElementById("roll-button");
 const roll_count= document.getElementById("roll-count");
@@ -11,26 +11,40 @@ const dice_btn5= document.getElementById("btn_5");
 
 
 roll_button.onclick = function() {
-    console.log("Clicked the button");
+    // document.getElementById("image1").src = SCC.dice_One_numbers;
+    // document.getElementById("image2").src = SCC.dice_Two_numbers;
+    // document.getElementById("image3").src = SCC.dice_Three_numbers;
+    // document.getElementById("image4").src = SCC.dice_Four_numbers;
+    // document.getElementById("image5").src = SCC.dice_Five_numbers;
+    button_heading_count(); 
+    var roll_clicks=0;
+    roll_clicks += 1;
 };
 
 dice_btn2.onclick = function() { 
     console.log("CLICKED IT"); 
 }; 
 
+// var border_select = function(){
+//     for (var i = 0; i <= 5; i++) {
+//         dice_btn[i].addEventListener("click", function() {
+//         this.dice.add(".test_skill")
+//         }); 
+//     };
+//     console.log("CHECKING");
+// };
 
 
-button_heading_count =() => {
-    if ((roll_number % 3 ==0) || roll_number==(0)); {
-        document.querySelector('h5').innerHTML= '3 rolls left'
+var button_heading_count =() => {
+    if ((roll_clicks % 3 ==0) || roll_clicks==(0)); {
+        roll_count.innerHTML= '3 rolls left'
     };
-    if ((roll_number % 3 ==1) || roll_number==(1)); {
-        document.querySelector('h5').innerHTML= '2 rolls left'
+    if ((roll_clicks % 3 ==1) || roll_clicks==(1)); {
+        roll_count.innerHTML= '2 rolls left'
     };
-    if ((roll_number % 3 ==2) || roll_number==(2)); {
-        document.querySelector('h5').innerHTML= '1 roll left'
+    if ((roll_clicks % 3 ==2) || roll_clicks==(2)); {
+        roll_count.innerHTML= '1 roll left'
     };
-return roll_count
 };
 
 //changing dice on click 
@@ -39,21 +53,21 @@ return roll_count
 
 // counting click number of dice selected 
 
-var clicks = 0;
+// var clicks = 0;
 
-onClick= () => {
-    one_clicks +=1;
-    two_clicks += 1;
-    three_clicks += 1;
-    four_clicks += 1;
-    five_clicks +=1;
-    dice_btn1.innerHTML = one_clicks;
-    dice_btn2.innerHTML = two_clicks;
-    dice_btn3.innerHTML = three_clicks;
-    dice_btn4.innerHTML = four_clicks;
-    dice_btn5.innerHTML = five_clicks;
-return stored_clicks[one_clicks,two_clicks,three_clicks,four_clicks,five_clicks]
-};
+// onClick= () => {
+//     one_clicks +=1;
+//     two_clicks += 1;
+//     three_clicks += 1;
+//     four_clicks += 1;
+//     five_clicks +=1;
+//     dice_btn1.innerHTML = one_clicks;
+//     dice_btn2.innerHTML = two_clicks;
+//     dice_btn3.innerHTML = three_clicks;
+//     dice_btn4.innerHTML = four_clicks;
+//     dice_btn5.innerHTML = five_clicks;
+// return stored_clicks[one_clicks,two_clicks,three_clicks,four_clicks,five_clicks]
+// };
 
 // SCC.storeClicks=(number) => {
 //     if (number%2 !=0 || number!=0) {

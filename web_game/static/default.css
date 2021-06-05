@@ -133,6 +133,12 @@ h5{
     text-align: center;
 }
 
+.test_skill {
+    border: 2px solid red;
+  }
+
+
+
 /* .mystyle {
     width: 100%;
     padding: 25px;
