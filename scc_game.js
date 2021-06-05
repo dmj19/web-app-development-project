@@ -1,6 +1,19 @@
 
 const scc_game = Object.create(null);
 
+const dice_set = {};
+
+scc_game.filled_dice_set = function(dice_set) {
+    var random_int= Math.floor(Math.random() * 6)+1;
+    for (var i=1; i<=5; i++) {
+        dice_set["random_int_" + String(i)] == random_int;
+    }; 
+}; 
+
+
+console.log(scc_game.filled_dice_set())
+
+
 
 // const random_int_6= Math.floor(Math.random() * 6)+1;
 // const random_int_7=Math.floor(Math.random() * 6)+1;
@@ -33,25 +46,11 @@ const scc_game = Object.create(null);
 // }; 
 
 
-
-
-const dice_set = {
-    "random_int_1": 1, 
-    "random_int_2": 1,
-    "random_int_3": 1,
-    "random_int_4": 1,
-    "random_int_5": 1,
-};
-
-scc_game.filled_dice_set = function(dice_set) {
-    var random_int= Math.floor(Math.random() * 6)+1;
-    for (var i=1; i<=5; i++) {
-        dice_set["random_int_" + String(i)] == random_int;
-    }; 
-}; 
-
-
-console.log(scc_game.filled_dice_set())
+// "random_int_1": 1 , 
+// "random_int_2": 1 ,
+// "random_int_3": 1 , 
+// "random_int_4": 1 , 
+// "random_int_5": 1
 
 
 // Object.keys(dice_set).forEach(
