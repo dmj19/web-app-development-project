@@ -18,7 +18,7 @@
 // const including = (x) => (array) => array.includes(x);
 
 
-// const curry_flatmap= (func) => (array) => array.flat_map(func);  
+// const curry_flatmap= (func) => (array) => array.flat_map(func);
 
 // const rest = (array) => array.slice(1, array.length);
 
@@ -34,7 +34,7 @@
 
 // const selected_dice_set=[]
 
-// //Dice roll numbers: 
+// //Dice roll numbers:
 // const dice_roll_change = function() {
 //     Dice_One_numbers= "dice_images/Dice_"+random_int+".png";
 //     Dice_Two_numbers= "dice_images/Dice_"+random_int+".png";
@@ -43,11 +43,11 @@
 //     Dice_Five_numbers= "dice_images/Dice_"+random_int+".png";
 // }
 
-// // const dice_roll = ("ROLLDICEBUTTON") =>  dice_set.push(random_int(6)); 
+// // const dice_roll = ("ROLLDICEBUTTON") =>  dice_set.push(random_int(6));
 // const fill_dice_set= ("ROLLDICEBUTTON"); {
 //     for (var i=0; i<(6-dice_set.length); i++) {
 //         // dice_roll("ROLLDICEBUTTON")
-//         dice_set.push(random_int(6)); 
+//         dice_set.push(random_int(6));
 //     };
 //     return dice_set
 // }
@@ -71,8 +71,8 @@
 
 //NOTES OF OLD CODE
 
-//ALT ZIP FUNCTION 
+//ALT ZIP FUNCTION
 // const zip = function (f) {
 //     return function ([a,b,c]) {
 //         return function ([x,y,z]) {
-//             return [f(a,x), f(b,y), f(c, z)] 
+//             return [f(a,x), f(b,y), f(c, z)]
