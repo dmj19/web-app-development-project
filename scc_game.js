@@ -55,6 +55,7 @@ SCC.filter = function(dice_set_2) {
       };
 var player = new Array(5);
 
+
 for (let i=1;i<4;i++){
     if (player.length==2){
       console.log("Would you like to keep your dice or reroll?");
@@ -75,6 +76,7 @@ if (player.length>2) {
     console.log ("Bad Luck, No Score, Roll Again?")
 };
 
+export default Object.freeze(SCC);
 
 // // SCC.first_roll_check = function(initial_dice_set) {
 // //     const second_dice_set = [initial_dice_set.find(element=> element==6)];
