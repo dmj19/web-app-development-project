@@ -24,34 +24,55 @@ return Object.values(id_names);
 
 const update_number = function(dicerollNumbers) {
   console.log(dicerollNumbers)
-  for (let i=0; i<(dicerollNumbers.length+1); i++){
+  for (let i=0; i<(dicerollNumbers.length); i++){
     document.getElementById("image"+ String(i+1)).setAttribute(
-      "src", "dice_images/Dice_"+ String(dicerollNumbers[i]+1) +".png");
+      "src", "dice_images/Dice_"+ String(dicerollNumbers[i]) +".png");
   };
-  for (let i=(dicerollNumbers.length+2); i<6; i++) {
-    document.getElementById("image"+ String(i)).setAttribute("src", "#");
-  };
+  console.log(dicerollNumbers.length);
+  // for (let i=(dicerollNumbers.length); i<=6; i++) {
+  //   console.log(dicerollNumbers.length);
+  //   document.getElementById("image"+ String(i)).setAttribute(
+  //     "src", "dice_images/Found.png");
+  // };
 };
 
 const total= (array) => {
     return array.reduce((a,b) => a+b,0);
 };
 
+const ship_images = function () {
+  document.getElementById("ship").innerHTML = "FOUND SHIP!";
+  console.log("You've found a Ship!");
+  document.getElementById("image5").setAttribute("src", "dice_images/Found.png");
+};
+
+const captain_images = function() {
+  document.getElementById("captain").innerHTML = "FOUND CAPTAIN!";
+  console.log("You've found a Captain!");
+  document.getElementById("image4").setAttribute("src", "dice_images/Found.png");
+};
+
+const crew_images = function() {
+  console.log("You've found a Crew!");
+  document.getElementById("crew").innerHTML = "FOUND CREW - SET SAIL!!";
+  document.getElementById("image3").setAttribute("src", "dice_images/Found.png");
+};
+
 const filter = function(dice_set_2) {
     if (dice_set_2.length==5){
       if (dice_set_2.includes(6)){
-        console.log("You've found a Ship!");
+        ship_images();
         dice_set_2.splice(dice_set_2.indexOf(6),1);
       }};
       if (dice_set_2.length==4){
         if (dice_set_2.includes(5)){
-          console.log("You've found a Captain!");
+          captain_images();
           dice_set_2.splice(dice_set_2.indexOf(5),1);
       }
       }
       if (dice_set_2.length==3){
         if (dice_set_2.includes(4)){
-          console.log("You've found a Crew!");
+          crew_images();
           dice_set_2.splice(dice_set_2.indexOf(4),1);
       }}
       };
@@ -60,16 +81,16 @@ var player = new Array(5);
 
 SCC.play_game= function() {
   for (let i=1;i<4;i++){
-      if (player.length==2){
-        console.log("Would you like to keep your dice or reroll?");
+    if (player.length==2){
+      console.log("Would you like to keep your dice or reroll?");
       // if yes then break here
-      };
-     player =diceroll(player.length);
-      // console.log(player);
-      update_number(player);
-      filter(player);
-      console.log(player);
     };
+    player =diceroll(player.length);
+    // console.log(player);
+    update_number(player);
+    filter(player);
+    console.log(player);
+  };
   if (player.length ==2) {
       total(player)
       console.log ("Your Score is "+ total(player))
@@ -82,7 +103,8 @@ SCC.play_game= function() {
 export default Object.freeze(SCC);
 
 // // // SCC.first_roll_check = function(initial_dice_set) {
-// // //     const second_dice_set = [initial_dice_set.find(element=> element==6)];
+// // //     const second_dice_set = [initial_dice_set.find(element=>
+// element==6)];
 // // //     if second_dice_set = undefined; {
 // // //         console.log("Roll Again")
 // // //     };
