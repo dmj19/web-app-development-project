@@ -1,6 +1,6 @@
 const SCC = Object.create(null);
 
-update_six = function(num){
+const update_six = function(num){
   var id_names = {
     // "image1": [6] ,
     // "image2": [6] ,
@@ -20,7 +20,7 @@ const diceroll = function(num) {
 return Object.values(id_names);
 }
 
-update_number = function(diceroll) {
+const update_number = function(diceroll) {
   for (let i=1; i<num+1;i++){
     document.querySelector("image"+ String(i)).setAttribute(
       "src", "dice_images/Dice_"+ String(diceroll[i]) +".png");
@@ -31,11 +31,11 @@ update_number = function(diceroll) {
   };
 };
 
-total= (array) => {
+const total= (array) => {
     return array.reduce((a,b) => a+b,0);
 };
 
-filter = function(dice_set_2) {
+const filter = function(dice_set_2) {
     if (dice_set_2.length==5){
       if (dice_set_2.includes(6)){
         console.log("You've found a Ship!");
@@ -55,6 +55,10 @@ filter = function(dice_set_2) {
       };
 var player = new Array(5);
 
+const final_roll = function() {
+
+}
+
 SCC.play_game= function() {
   for (let i=1;i<4;i++){
       if (player.length==2){
@@ -67,14 +71,13 @@ SCC.play_game= function() {
       update_number();
       console.log(player);
     };
-};
-
-if (player.length ==2) {
-    total(player)
-    console.log ("Your Score is "+ total(player))
-};
-if (player.length>2) {
-    console.log ("Bad Luck, No Score, Roll Again?")
+  if (player.length ==2) {
+      total(player)
+      console.log ("Your Score is "+ total(player))
+  };
+  if (player.length>2) {
+      console.log ("Bad Luck, No Score, Roll Again?")
+  };
 };
 
 export default Object.freeze(SCC);
