@@ -10,12 +10,12 @@ var roll_clicks = 0;
 roll_button.onclick = function () {
     roll_clicks += 1;
     button_heading_count();
-    SCC.play_game();
     console.log("CLICKED");
     trial_title.innerHTML = "TRIAL";
+    SCC.play_game();
 };
 
-var button_heading_count = function () {
+const button_heading_count = function () {
     if ((roll_clicks % 3 === 0) || roll_clicks === (0)) {
         roll_count.innerHTML = "3 rolls left";
     }
