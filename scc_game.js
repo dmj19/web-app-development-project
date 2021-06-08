@@ -7,12 +7,14 @@ SCC.init = function() {
 
   var roll_clicks = 0;
 
-  roll_button.onclick = function () {
+    const click_trial = function () {
       button_heading_count();
       roll_clicks += 1;
       console.log("CLICKED");
       trial_title.innerHTML = "TRIAL";
   };
+
+  roll_button.onclick = click_trial();
 
   var button_heading_count = function () {
       if ((roll_clicks % 3 === 0) || roll_clicks === (0)) {
@@ -101,6 +103,8 @@ SCC.init = function() {
       console.log ("Bad Luck, No Score, Roll Again?")
   };
 };
+
+export default Object.freeze(SCC);
 
 
 // // SCC.first_roll_check = function(initial_dice_set) {
