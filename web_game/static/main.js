@@ -1,32 +1,5 @@
+
 import SCC from "../../scc_game.js";
-
-// const Clicking = Object.create(null);
-
-const roll_button = document.getElementById("roll-button");
-const roll_count = document.getElementById("roll-count");
-const trial_title = document.getElementById("trial");
-
-var roll_clicks = 0;
-
-roll_button.onclick = function () {
-    button_heading_count();
-    SCC.start_game();
-    roll_clicks += 1;
-    console.log("CLICKED");
-    trial_title.innerHTML = "TRIAL";
-};
-
-var button_heading_count = function () {
-    if ((roll_clicks % 3 === 0) || roll_clicks === (0)) {
-        roll_count.innerHTML = "3 rolls left";
-    }
-    if ((roll_clicks % 3 === 1) || roll_clicks === (1)) {
-        roll_count.innerHTML = "2 rolls left";
-    }
-    if ((roll_clicks % 3 === 2) || roll_clicks === (2)) {
-        roll_count.innerHTML = "1 roll left";
-    }
-};
 
 window.addEventListener("DOMContentLoaded", function () {
     SCC.init();

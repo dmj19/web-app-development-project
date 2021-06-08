@@ -1,7 +1,32 @@
 const SCC = Object.create(null);
 
-init = function() {
-  SCC.update_six = function(num){
+SCC.init = function() {
+  const roll_button = document.getElementById("roll-button");
+  const roll_count = document.getElementById("roll-count");
+  const trial_title = document.getElementById("trial");
+
+  var roll_clicks = 0;
+
+  roll_button.onclick = function () {
+      button_heading_count();
+      roll_clicks += 1;
+      console.log("CLICKED");
+      trial_title.innerHTML = "TRIAL";
+  };
+
+  var button_heading_count = function () {
+      if ((roll_clicks % 3 === 0) || roll_clicks === (0)) {
+          roll_count.innerHTML = "3 rolls left";
+      }
+      if ((roll_clicks % 3 === 1) || roll_clicks === (1)) {
+          roll_count.innerHTML = "2 rolls left";
+      }
+      if ((roll_clicks % 3 === 2) || roll_clicks === (2)) {
+          roll_count.innerHTML = "1 roll left";
+      }
+  };
+
+  update_six = function(num){
     var id_names = {
       // "image1": [6] ,
       // "image2": [6] ,
@@ -17,11 +42,11 @@ init = function() {
     }
 
   const diceroll = function(num) {
-    const id_names=SCC.update_six(num);
+    const id_names=update_six(num);
   return Object.values(id_names);
   }
 
-  SCC.update_number = function(diceroll) {
+  update_number = function(diceroll) {
     for (let i=1; i<num+1;i++){
       document.querySelector("image"+ String(i)).setAttribute(
         "src", "dice_images/Dice_"+ String(diceroll[i]) +".png");
@@ -56,20 +81,17 @@ init = function() {
         };
   var player = new Array(5);
 
-  const start_game= function() {
-    for (let i=1;i<4;i++){
-        if (player.length==2){
-          console.log("Would you like to keep your dice or reroll?");
-        // if yes then break here
-        };
-        player=diceroll(player.length);
-        console.log(player);
-        filter(player);
-        SCC.update_number();
-        console.log(player);
-    };
+  for (let i=1;i<4;i++){
+      if (player.length==2){
+        console.log("Would you like to keep your dice or reroll?");
+      // if yes then break here
+      };
+      player=diceroll(player.length);
+      console.log(player);
+      filter(player);
+      update_number();
+      console.log(player);
   };
-
 
   if (player.length ==2) {
       total(player)
@@ -78,10 +100,7 @@ init = function() {
   if (player.length>2) {
       console.log ("Bad Luck, No Score, Roll Again?")
   };
-
 };
-
-
 
 
 // // SCC.first_roll_check = function(initial_dice_set) {
