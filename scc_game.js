@@ -7,11 +7,11 @@ SCC.init = function() {
 
   var roll_clicks = 0;
 
-    const click_trial = function () {
-      button_heading_count();
-      roll_clicks += 1;
-      console.log("CLICKED");
-      trial_title.innerHTML = "TRIAL";
+  const click_trial = function () {
+    button_heading_count();
+    roll_clicks += 1;
+    console.log("CLICKED");
+    trial_title.innerHTML = "TRIAL";
   };
 
   roll_button.onclick = click_trial();
