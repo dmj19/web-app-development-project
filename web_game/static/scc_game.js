@@ -28,6 +28,7 @@ const update_number = function(dicerollNumbers) {
     document.getElementById("image"+ String(i+1)).setAttribute(
       "src", "dice_images/Dice_"+ String(dicerollNumbers[i]) +".png");
   };
+
   console.log(dicerollNumbers.length);
   // for (let i=(dicerollNumbers.length); i<=6; i++) {
   //   console.log(dicerollNumbers.length);
@@ -43,19 +44,22 @@ const total= (array) => {
 const ship_images = function () {
   document.getElementById("ship").innerHTML = "FOUND SHIP!";
   console.log("You've found a Ship!");
-  document.getElementById("image5").setAttribute("src", "dice_images/Found.png");
+  document.getElementById("image5").setAttribute("src", "dice_images/blue_six.png");
+  document.getElementById("ship-image").setAttribute("src", "dice_images/ship.png");
 };
 
 const captain_images = function() {
   document.getElementById("captain").innerHTML = "FOUND CAPTAIN!";
   console.log("You've found a Captain!");
-  document.getElementById("image4").setAttribute("src", "dice_images/Found.png");
+  document.getElementById("image4").setAttribute("src", "dice_images/blue_five.png");
+  document.getElementById("captain-image").setAttribute("src", "dice_images/captain.png");
 };
 
 const crew_images = function() {
   console.log("You've found a Crew!");
   document.getElementById("crew").innerHTML = "FOUND CREW - SET SAIL!!";
-  document.getElementById("image3").setAttribute("src", "dice_images/Found.png");
+  document.getElementById("image3").setAttribute("src", "dice_images/blue_four.png");
+  document.getElementById("crew-image").setAttribute("src", "dice_images/crew.png");
 };
 
 const filter = function(dice_set_2) {
@@ -83,6 +87,7 @@ SCC.play_game= function() {
   for (let i=1;i<4;i++){
     if (player.length==2){
       console.log("Would you like to keep your dice or reroll?");
+      document.getElementById("h4").innerHTML = "End Turn or reroll?";
       // if yes then break here
     };
     player =diceroll(player.length);
@@ -94,9 +99,10 @@ SCC.play_game= function() {
   if (player.length ==2) {
       total(player)
       console.log ("Your Score is "+ total(player))
+      document.getElementById("h4").innerHTML = ("Your Score is "+ String(total(player)));
   };
   if (player.length>2) {
-      console.log ("Bad Luck, No Score, Roll Again?")
+      console.log ("Bad Luck, No Score, Play Again?")
   };
 };
 

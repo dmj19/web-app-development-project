@@ -46,17 +46,19 @@ nav {
 
 
 nav ul {
-    display: inline-block; 
-    margin: 7px;
-    padding: 15px;
+    margin: 15px;
+    padding: 5px;
     list-style-type: none;
     background-color: white;
+    display: inline-block;
     border-radius: 5px;
+    width:40%;
 }
 
 nav li{
     text-align: center;
     margin: 5px 0;
+    width: 100%;
 
 }
 
@@ -64,7 +66,7 @@ nav li{
     border-style: none;
 }
 
-#top-combos {
+#how-to {
     border-style: none;
     height: 300px;
 }
@@ -86,16 +88,17 @@ nav li{
 }
 .cells li{
     border: 1px solid;
+    background-color: lightsteelblue; 
     border-radius: 5px;
+    text-align: center;
     border-collapse: separate; 
-    border-spacing: 15px  ;
 }
 
-.combo-row li{
+.instructions {
     border: 1px solid white; 
     border-radius: 5px;
     border-collapse: separate; 
-    border-spacing: 15px 50px  ;
+    border-spacing: 15px 15px  ;
     text-align: left;
 }
 
@@ -103,6 +106,13 @@ nav li{
     display: inline-block;
     width: 15%; 
     text-align: center;
+}
+
+.pic{
+    display: inline-block;
+    width: 40%; 
+    text-align: center;
+    position:relative; left:30%; 
 }
 
 img{

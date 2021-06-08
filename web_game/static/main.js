@@ -6,6 +6,7 @@ const roll_count = document.getElementById("roll-count");
 
 var roll_clicks = 0;
 
+
 roll_button.onclick = function () {
     roll_clicks += 1;
     button_heading_count();
@@ -14,7 +15,7 @@ roll_button.onclick = function () {
 };
 
 const button_heading_count = function () {
-    if ((roll_clicks % 3 === 0) || roll_clicks === (0)) {
+    if (roll_clicks === (0)) {
         roll_count.innerHTML = "3 rolls left";
     }
     if ((roll_clicks % 3 === 1) || roll_clicks === (1)) {
@@ -22,6 +23,9 @@ const button_heading_count = function () {
     }
     if ((roll_clicks % 3 === 2) || roll_clicks === (2)) {
         roll_count.innerHTML = "1 roll left";
+    }
+    if (roll_clicks % 3 === (0)) {
+        roll_count.innerHTML = "End of Turn";
     }
 };
 
