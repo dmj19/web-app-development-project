@@ -8,6 +8,14 @@
 
 // const random_int= Math.floor(Math.random() * 6)+1;
 
+// var border_select = function(){
+//     for (var i = 0; i <= 5; i++) {
+//         dice_btn[i].addEventListener("click", function() {
+//         this.dice.add(".test_skill")
+//         });
+//     };
+//     console.log("CHECKING");
+// };
 
 // console.log(filled_dice_set())
 
