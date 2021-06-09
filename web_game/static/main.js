@@ -1,20 +1,20 @@
 
 import SCC from "./scc_game.js";
 
-const roll_button = document.getElementById("roll-button");
-// const roll_count = document.getElementById("roll-count");
+// const roll_button = document.getElementById("roll-button");
+// // const roll_count = document.getElementById("roll-count");
 
-// var roll_clicks = 0;
-
-
+// // var roll_clicks = 0;
 
 
-roll_button.onclick = function () {
-    // roll_clicks += 1;
-    // button_heading_count();
-    console.log("CLICKED");
-    SCC.play_game();
-};
+
+
+// roll_button.onclick = function () {
+//     // roll_clicks += 1;
+//     // button_heading_count();
+//     console.log("CLICKED");
+//     SCC.play_game(player);
+// };
 
 // const button_heading_count = function () {
 //     if (roll_clicks === (0)) {
