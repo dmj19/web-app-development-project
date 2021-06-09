@@ -2,32 +2,34 @@
 import SCC from "./scc_game.js";
 
 const roll_button = document.getElementById("roll-button");
-const roll_count = document.getElementById("roll-count");
+// const roll_count = document.getElementById("roll-count");
 
-var roll_clicks = 0;
+// var roll_clicks = 0;
+
+
 
 
 roll_button.onclick = function () {
-    roll_clicks += 1;
-    button_heading_count();
+    // roll_clicks += 1;
+    // button_heading_count();
     console.log("CLICKED");
     SCC.play_game();
 };
 
-const button_heading_count = function () {
-    if (roll_clicks === (0)) {
-        roll_count.innerHTML = "3 rolls left";
-    }
-    if ((roll_clicks % 3 === 1) || roll_clicks === (1)) {
-        roll_count.innerHTML = "2 rolls left";
-    }
-    if ((roll_clicks % 3 === 2) || roll_clicks === (2)) {
-        roll_count.innerHTML = "1 roll left";
-    }
-    if (roll_clicks % 3 === (0)) {
-        roll_count.innerHTML = "End of Turn";
-    }
-};
+// const button_heading_count = function () {
+//     if (roll_clicks === (0)) {
+//         roll_count.innerHTML = "3 rolls left";
+//     }
+//     if ((roll_clicks % 3 === 1) || roll_clicks === (1)) {
+//         roll_count.innerHTML = "2 rolls left";
+//     }
+//     if ((roll_clicks % 3 === 2) || roll_clicks === (2)) {
+//         roll_count.innerHTML = "1 roll left";
+//     }
+//     if (roll_clicks % 3 === (0)) {
+//         roll_count.innerHTML = "End of Turn";
+//     }
+// };
 
 
 
