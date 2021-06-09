@@ -130,7 +130,6 @@ function waitingKeypress() {
 }
 
 SCC.play_game= function() {
-  
   // if (player.length==5){
   //   player =diceroll(player.length);
   //   update_number(player);
@@ -149,7 +148,6 @@ SCC.play_game= function() {
   filter(player);
   console.log(player);
   re_roll_check();
-  };
   if (player.length ==2) {
       total(player)
       console.log ("Your Score is "+ total(player))
@@ -159,7 +157,6 @@ SCC.play_game= function() {
       console.log ("Bad Luck, No Score, Play Again?")
   };
 };
-
 var player = new Array(5);
 
 export default Object.freeze(SCC);
