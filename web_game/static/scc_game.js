@@ -24,6 +24,7 @@ return id_names
 
 const diceroll = function(num) {
   const id_names=update_six(num);
+  update_number(id_names);
 return Object.values(id_names);
 };
 
@@ -85,7 +86,6 @@ const filter = function(dice_set_2) {
       }}
       };
 
-var player = new Array(5);
 
 async function on_press() {
   console.log("waiting keypress..");
@@ -114,11 +114,6 @@ const button_heading_count = function () {
 async function re_roll_check() {
   console.log("waiting keypress..")
   await waitingKeypress();
-  // player =diceroll(player.length);
-  // // console.log(player);
-  // update_number(player);
-  // filter(player);
-  // console.log(player);
   console.log("good job!");
 }
 
@@ -135,25 +130,25 @@ function waitingKeypress() {
 }
 
 SCC.play_game= function() {
-  for (let i=1;i<4;i++){
-    // if (player.length==5){
-    //   player =diceroll(player.length);
-    //   update_number(player);
-    //   filter(player);
-    //   console.log(player);
-    // };
-    if (player.length==2){
-      console.log("Would you like to keep your dice or reroll?");
-      document.getElementById("space").innerHTML = "End Turn or reroll?";
-      // if yes then break here
-    };
-    document.getElementById("space").innerHTML = "Press R to Re-roll";
-    player =diceroll(player.length);
-    console.log(player);
-    update_number(player);
-    filter(player);
-    console.log(player);
-    re_roll_check();
+  
+  // if (player.length==5){
+  //   player =diceroll(player.length);
+  //   update_number(player);
+  //   filter(player);
+  //   console.log(player);
+  // };
+  if (player.length==2){
+    console.log("Would you like to keep your dice or reroll?");
+    document.getElementById("space").innerHTML = "End Turn or reroll?";
+    // if yes then break here
+  };
+  document.getElementById("space").innerHTML = "Press R to Re-roll";
+  player = diceroll(player.length);
+  console.log(player);
+  update_number(player);
+  filter(player);
+  console.log(player);
+  re_roll_check();
   };
   if (player.length ==2) {
       total(player)
@@ -164,6 +159,8 @@ SCC.play_game= function() {
       console.log ("Bad Luck, No Score, Play Again?")
   };
 };
+
+var player = new Array(5);
 
 export default Object.freeze(SCC);
 
