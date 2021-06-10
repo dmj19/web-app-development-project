@@ -13,7 +13,13 @@
 
 <!-- MAIN BODY OF TEXT -->
 <main> 
-    <button id="starter-button" >Start Game Play</button>
+    <p id="space"> Enter Name and Click Below to Play  </p>
+    <section>
+        <textarea id="composition" class="composition-pane"
+            aria-label="Compose message" placeholder="Enter Name Here…"></textarea>
+        <button id="roll-button" class="input-name" > Play</button>
+    </section>
+    <!-- <button id="starter-button" >Start Game Play</button> -->
     <div class= "container"> 
         <div class = "dice">
             <p>Dice 1</p>
@@ -35,16 +41,15 @@
             <p>Dice 5</p>
             <img id= "image5" src= "dice_images/Dice_6.png">
         </div>
+        <h5 id="roll-count"> 3 Rolls Left!</h5>
     </div>
-    <p id="space"> Click Below to Play  </p>
-    <button id="roll-button" > Play</button>
     <h4> Searching the Seas... </h4>
     <div class= "sea-search"> 
         <p id="ship">  </p>
         <p id="captain">  </p>
         <p id="crew">  </p>
     </div>
-    <h5 id="roll-count"> 3 Rolls Left!</h5>
+    
 </main>
 
 <!--NAV TEXT -->
@@ -71,7 +76,7 @@
             <li>TOTAL</li>
         </div>
     </ul>
-    <ul id= "Player-Two">
+    <!-- <ul id= "Player-Two">
         </li><h3>Player Two Collection</h3></li>
         <div class= "cells"> 
             <li>Ship</li>
@@ -79,16 +84,16 @@
             <li>Crew</li>
             <li>TOTAL</li>
         </div>
-    </ul>
-    <div id= "how-to">
-        </li><h3>How to Play</h3></li>
-        <div class= "instructions"> 
-            <p >Cast your Dice to sea to find a Ship (6), Captain(5) and Crew (4) in 3 rolls.
-                The catch is, They must be found in order to keep them! Once achieved, your bounty is the 
-                total of the 2 dice you have left. 
-            </p>
+    </ul> -->
+    <ul id= "how-to">
+        <h3>How to Play</h3>
+        <div class="cells" id="instructions"> 
+            <p >Cast your Dice to sea to find a Ship (6), Captain(5) and Crew (4) in 3 rolls.</p>
+            <p >The catch is, They must be found in order to keep them! </p>
+            <p >   Once achieved, your bounty is the total of the 2 dice you have left. </p>
+            
         </div>
-    </div>
+    </ul>
 
 </nav>
 

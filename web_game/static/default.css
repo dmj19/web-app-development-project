@@ -4,6 +4,7 @@
     --banner-height : 80px;
     --nav-width: 500px; 
     --font-size: 11pt;
+    margin-left: 20px;
 }
 
 
@@ -36,7 +37,7 @@ main {
 }
 
 nav {
-    background-color: tomato;
+    background-color:cadetblue;
     border-radius: 15px;
     position: absolute;
     height: calc(100% - var(--banner-height)) ;
@@ -46,8 +47,8 @@ nav {
 
 
 nav ul {
-    margin: 15px;
-    padding: 5px;
+    margin-left: 15px;
+    padding: 10px;
     list-style-type: none;
     background-color: white;
     display: inline-block;
@@ -69,7 +70,10 @@ nav li{
 
 #how-to {
     border-style: none;
-    height: 300px;
+    height: 260px;
+    position:absolute;
+    top: 60px; 
+    
 }
 
 #Player-One{
@@ -94,8 +98,11 @@ nav li{
     text-align: center;
     border-collapse: separate; 
 }
+.cells {
+    display: inline-block; 
+}
 
-.instructions {
+#instructions {
     border: 1px solid white; 
     border-radius: 5px;
     border-collapse: separate; 
@@ -112,7 +119,10 @@ nav li{
 #space{
     text-align: center;
     font-size: larger;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-style:inherit;  
     color: darkcyan;
+    font-weight:bolder; 
 }
 
 .pic{
@@ -150,6 +160,10 @@ h4{
 
 h5{
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:medium; 
+    color: lightsteelblue; 
+    font-weight:bolder; 
 }
 
 h9 { 
@@ -159,10 +173,28 @@ h9 {
 .sea-search{
     text-align: center;
     color: cadetblue;
+    font-weight:bolder; 
 }
 
+.input-name {
+    right:0;
+    width: 20%;
+    height: 20px; 
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: cadetblue;
+    border: 1px solid black;
+    border-radius: 10px;
 
+}
 
+.composition-pane {
+    background-color: darkgrey;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 10px; 
+    width: 75%;
+    height: 30px; 
+}
 
 /* .mystyle {
     width: 100%;
