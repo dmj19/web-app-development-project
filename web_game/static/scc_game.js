@@ -53,8 +53,9 @@ console.log(dicerollNumbers.length);
 };
 
 const total= (array) => {
-  if (array.length>2);
+  if (array.length>2){
     array = [0,0];
+  }
 return array.reduce((a,b) => a+b,0);
 };
 
@@ -120,7 +121,7 @@ const filter = function(dice_set_2) {
 const end_turn= function(player) {
     console.log ("Your Score is "+ total(player))
     if (player.length==2); {
-      document.getElementById("space").innerHTML = ("Your Score is "+ String(total(player)));
+      document.getElementById("space").innerHTML = ("Your Score is "+ String(total(player))+", Click to Play again");
     };
 }
 
