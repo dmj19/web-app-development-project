@@ -28,7 +28,7 @@ header {
 main { 
     background-color: whitesmoke;
     width: calc(100% - var(--nav-width)) ;
-    height: calc(100% - var(--banner-height)) ;
+    height: 100% ;
     position: absolute; 
     top: var(--banner-height);
     left: var(--nav-width);
@@ -53,6 +53,7 @@ nav ul {
     display: inline-block;
     border-radius: 5px;
     width:40%;
+
 }
 
 nav li{
@@ -106,6 +107,12 @@ nav li{
     display: inline-block;
     width: 15%; 
     text-align: center;
+}
+
+#space{
+    text-align: center;
+    font-size: larger;
+    color: darkcyan;
 }
 
 .pic{

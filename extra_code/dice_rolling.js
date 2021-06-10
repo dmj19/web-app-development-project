@@ -47,3 +47,19 @@
 // const selected_dice_set=[]
 
 
+
+
+// const button_heading_count = function () {
+//     if (roll_clicks === (0)) {
+//         roll_count.innerHTML = "3 rolls left";
+//     }
+//     if ((roll_clicks % 3 === 1) || roll_clicks === (1)) {
+//         roll_count.innerHTML = "2 rolls left";
+//     }
+//     if ((roll_clicks % 3 === 2) || roll_clicks === (2)) {
+//         roll_count.innerHTML = "1 roll left";
+//     }
+//     if (roll_clicks % 3 === (0)) {
+//         roll_count.innerHTML = "End of Turn";
+//     }
+//   };

@@ -13,7 +13,6 @@ roll_button.onclick = function () {
   play_game(player);
 };
 
-
 var roll_clicks = 0;
 
 
@@ -36,7 +35,7 @@ return id_names
 
 const diceroll = function(num) {
   const id_names=update_six(num);
-return Object.values(id_names);
+return Object.values(id_names).sort();
 };
 
 const update_number = function(dicerollNumbers) {
@@ -54,7 +53,9 @@ console.log(dicerollNumbers.length);
 };
 
 const total= (array) => {
-    return array.reduce((a,b) => a+b,0);
+  if (array.length>2);
+    array = [0,0];
+return array.reduce((a,b) => a+b,0);
 };
 
 const ship_images = function () {
@@ -104,25 +105,46 @@ const filter = function(dice_set_2) {
 //   roll_clicks += 1;
 //   button_heading_count();
 // }
+// const set_total = function (player) {
+//   if (player.length ==2) {
+//     total(player)
+//     console.log ("Your Score is "+ total(player))
+//     document.getElementById("space").innerHTML = ("Your Score is "+ String(total(player)));
+//   };
+
+//   if (player.length>2) {
+//     console.log ("Bad Luck, No Score, Play Again?")
+//   }
+// };
+
+const end_turn= function(player) {
+    console.log ("Your Score is "+ total(player))
+    if (player.length==2); {
+      document.getElementById("space").innerHTML = ("Your Score is "+ String(total(player)));
+    };
+}
 
 
-const button_heading_count = function () {
+
+const button_heading_count = function (player) {
   if (roll_clicks === (0)) {
       roll_count.innerHTML = "3 rolls left";
   }
-  if ((roll_clicks % 3 === 1) || roll_clicks === (1)) {
+  if (roll_clicks === (1)) {
       roll_count.innerHTML = "2 rolls left";
   }
-  if ((roll_clicks % 3 === 2) || roll_clicks === (2)) {
+  if (roll_clicks === (2)) {
       roll_count.innerHTML = "1 roll left";
   }
-  if (roll_clicks % 3 === (0)) {
+  if (roll_clicks === (3)) {
       roll_count.innerHTML = "End of Turn";
+      end_turn(player);
   }
 };
 
 
 async function re_roll_check(player) {
+  button_heading_count(player);
   console.log("waiting keypress..")
   await waitingKeypress();
   play_game(player);
@@ -143,36 +165,17 @@ function waitingKeypress() {
 
 const play_game= function(player) {
   roll_clicks += 1;
-  // if (player.length==5){
-  //   player =diceroll(player.length);
-  //   update_number(player);
-  //   filter(player);
-  //   console.log(player);
-  // };
-  // if (player.length==2){
-  //   console.log("Would you like to keep your dice or reroll?");
-  //   document.getElementById("space").innerHTML = "End Turn or reroll?";
-    // if yes then break here
+
   document.getElementById("space").innerHTML = "Press R to Re-roll";
   player = diceroll(player.length);
   console.log(player);
   update_number(player);
   filter(player);
   console.log(player);
-  
-  if (player.length ==2) {
-    total(player)
-    console.log ("Your Score is "+ total(player))
-    document.getElementById("space").innerHTML = ("Your Score is "+ String(total(player)));
+  if (player.length==2){
+    end_turn(player);
   };
   re_roll_check(player);
-
-  button_heading_count(); 
-
-
-  if (player.length>2) {
-      console.log ("Bad Luck, No Score, Play Again?")
-  };
 };
 
 
