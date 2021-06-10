@@ -1,12 +1,11 @@
 const SCC = Object.create(null);
+
 const roll_button = document.getElementById("roll-button");
 const roll_count = document.getElementById("roll-count");
 // const roll_count = document.getElementById("roll-count");
 
-// var roll_clicks = 0;
 
-
-roll_button.onclick = function (player) {
+roll_button.onclick = function () {
   var player = new Array(5);
     // roll_clicks += 1;
     // button_heading_count();
@@ -123,7 +122,7 @@ const button_heading_count = function () {
 };
 
 
-async function re_roll_check() {
+async function re_roll_check(player) {
   console.log("waiting keypress..")
   await waitingKeypress();
   play_game(player);
@@ -143,6 +142,7 @@ function waitingKeypress() {
 }
 
 const play_game= function(player) {
+  roll_clicks += 1;
   // if (player.length==5){
   //   player =diceroll(player.length);
   //   update_number(player);
@@ -159,13 +159,17 @@ const play_game= function(player) {
   update_number(player);
   filter(player);
   console.log(player);
-  re_roll_check();
-
+  
   if (player.length ==2) {
-      total(player)
-      console.log ("Your Score is "+ total(player))
-      document.getElementById("space").innerHTML = ("Your Score is "+ String(total(player)));
+    total(player)
+    console.log ("Your Score is "+ total(player))
+    document.getElementById("space").innerHTML = ("Your Score is "+ String(total(player)));
   };
+  re_roll_check(player);
+
+  button_heading_count(); 
+
+
   if (player.length>2) {
       console.log ("Bad Luck, No Score, Play Again?")
   };
