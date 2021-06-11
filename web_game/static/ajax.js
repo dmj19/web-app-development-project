@@ -18,3 +18,12 @@ Ajax.query = function (requestObj) {
 };
 
 export default Object.freeze(Ajax);
+
+
+// return Promise.resolve({
+//     { "message": my_message_text}
+// { "name-collection": "Daisy's Collection"}
+// })
+    // {"response": my_message_text + "'s Collection"}
+// { "input-name": "Daisy"}
+// { "name-collection": "Daisy's Collection"}

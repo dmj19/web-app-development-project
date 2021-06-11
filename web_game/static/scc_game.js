@@ -1,15 +1,54 @@
+import Ajax from "./ajax.js";
+
 const SCC = Object.create(null);
 
 const roll_button = document.getElementById("roll-button");
+const composition = document.getElementById("composition");
 const roll_count = document.getElementById("roll-count");
+const name_collection = document.getElementById("name-collection");
 // const roll_count = document.getElementById("roll-count");
+
+
+// const cloneTemplate = function (id) {
+//   return document.importNode(document.getElementById(id).content, true);
+// };
+
+// const add_name = function (composition) {
+//   const my_new_message = cloneTemplate("my-message");
+//   my_new_message.querySelector(
+//       "[name=message]"
+//   ).textContent = my_message_text;
+//   };
+
+// const add_name = {
+//   "name": "add_name",
+//   "response": function (message) {
+//       return message+ "'s Collection";
+//   }
+// };
+
 
 
 roll_button.onclick = function () {
   var player = new Array(5);
     // roll_clicks += 1;
     // button_heading_count();
-  console.log("CLICKED");
+  console.log(composition.value);
+
+
+  Ajax.query({
+    "message": composition.value
+  }).then(function (responseObj){
+      // // const my_message_text = composition.value;
+      // // name_collection.innerHTML = add_name.response(my_message_text);
+      //   const my_new_message = cloneTemplate("my-message");
+      //   my_new_message.querySelector(
+      //       "[name=message]"
+      //   ).textContent = responseObj.response;
+
+      console.log(responseObj.message);
+  });
+  // add_name(composition);
   play_game(player);
 };
 
@@ -23,6 +62,14 @@ var id_names = {
   // "image4" : [6] ,
   // "image5" :[6]
   };
+
+// const add_name = function (composition) {
+//   console.log(composition.value);
+//   const my_message_text = composition.value;
+//   name_collection.innerHTML = my_message_text + "'s Collection";
+// }
+
+console.log(composition.value);
 
 const update_six = function(num){
   for (let i=1;i<num+1;i++){
@@ -182,6 +229,7 @@ const play_game= function(player) {
 
 
 export default Object.freeze(SCC);
+// export default Object.freeze(Ajax);
 
 // // // SCC.first_roll_check = function(initial_dice_set) {
 // // //     const second_dice_set = [initial_dice_set.find(element=>

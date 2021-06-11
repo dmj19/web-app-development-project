@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="default.css">
 <link rel="shortcut icon" href="/dice_images/favicon.png">
 <script type="module" src="main.js"></script>
-
+<script type="module" src="scc_game.js"></script>
 <!-- HEADER TEXT -->
 <header>
     <h1>      Ship,Captain and Crew! 🎲</h1>
@@ -14,11 +14,10 @@
 <!-- MAIN BODY OF TEXT -->
 <main> 
     <p id="space"> Enter Name and Click Below to Play  </p>
-    <section>
-        <textarea id="composition" class="composition-pane"
-            aria-label="Compose message" placeholder="Enter Name Here…"></textarea>
-        <button id="roll-button" class="input-name" > Play</button>
-    </section>
+    <input id="composition" class="composition-pane"
+            aria-label="Compose message" placeholder="Enter Name Here…">  </input>
+    <button id="roll-button" class="input-name"> Play </button>
+
     <!-- <button id="starter-button" >Start Game Play</button> -->
     <div class= "container"> 
         <div class = "dice">
@@ -56,7 +55,9 @@
 <nav>
     <h2> SCORE BOARD</h2>
     <ul id= "Player-One">
-        </li><h3>Player One Collection</h3></li>
+        <template id="my-message">
+        <h3 id= "name-collection" name='message'>Player One Collection</h3>
+        </template>
         <div class= "cells">
             <li>Ship</li>
             <div class = "pic">

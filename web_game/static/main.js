@@ -1,5 +1,6 @@
 
-import SCC from "./scc_game.js";
+// import SCC from "./scc_game.js";
+// import Ajax from "./ajax.js";
 
 // const roll_button = document.getElementById("roll-button");
 // // const roll_count = document.getElementById("roll-count");

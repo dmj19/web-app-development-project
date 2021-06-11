@@ -7,6 +7,9 @@
     margin-left: 20px;
 }
 
+#roll-button :hover{
+    background-color: red;
+}
 
 body {
     font-family: "Arial", sans-serif;
