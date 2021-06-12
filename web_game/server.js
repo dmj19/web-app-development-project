@@ -9,7 +9,7 @@ app.use("/", express.static("web_game/static"));
 app.use("/", express.json());
 app.post("/", function (req, res) {
     const request_object = req.body;
-    console.log("sver speaking:" + request_object)
+    console.log("sver speaking:" + request_object);
     let mes = serverfunction.nameappend(request_object.message);
 
     res.json({
