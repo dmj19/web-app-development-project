@@ -46,7 +46,7 @@ roll_button.onclick = function () {
       //       "[name=message]"
       //   ).textContent = responseObj.response;
 
-      console.log(responseObj.message);
+      name_collection.innerHTML= (responseObj.message);
   });
   // add_name(composition);
   play_game(player);
