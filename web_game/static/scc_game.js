@@ -38,7 +38,7 @@ console.log(composition.value);
 
 /* update_six takes in a number and a returns an object with the same number of
  names, each assigned wtih a random dice roll */
-const update_six = function(num){
+SCC.update_six = function(num){
   id_names= {};
   console.log(num);
   for (let i=1;i<num+1;i++){
@@ -58,7 +58,7 @@ update six function. Redefining id_names allows the
 return of the object's values in ascending order */
 SCC.diceroll = function(num) {
   console.log(num);
-  id_names=update_six(num);
+  id_names=SCC.update_six(num);
   console.log(Object.values(id_names).sort());
   return Object.values(id_names).sort();
   // returns an array of dice roll numbers in ascending order
