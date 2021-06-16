@@ -1,5 +1,5 @@
 
-// create game object to call to UI file
+// create SCC_game object to call to UI file
 const SCC = Object.create(null);
 
 /*  returning element object representing the element
