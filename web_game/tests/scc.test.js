@@ -1,36 +1,53 @@
-import SCC from "../static/scc_game.js";
 import fc from "fast-check";
+import Total from "../static/total.js";
 import property from "./property.js";
 
 
-const final_score= fc.constant(11);
-const dice_input= fc.array(Object.values(SCC.update_six(6)));
+const rand_dice= fc.uint8Array({min: 1, max: 6, minLength: 2, maxLength: 5});
+const dice_input= fc.uint8Array({min: 1, max: 6, minLength: 5, maxLength: 5});
 
-// console.log(SCC.total());
+// Object.values()
+
+// console.log(Total.total(dice_input));
 
 
 describe("Ship Captain Crew rules", function () {
 
     property(
         "maximum score of player cannot be greater than 12",
-        [final_score],
+        [rand_dice],
         function (score_total) {
-            const round= score_total.flat();
+
+            var round= Total.total(score_total);
 
             return (round <= 12);
         }
     );
 
-    property(
-        "if dice are in reverse order, the outcome is the same",
-        [dice_input],
-        function (input_dice) {
-            const dice1= input_dice.flat();
-            const dice2= input_dice.reverse();
-
-            return (dice1===dice2);
+    it("If no score is entered into total, play isn't detected ", function () {
+        if (Total.total(0) !== 0) {
+            throw "Play input isn't detected, Try input again";
         }
-    );
+    });
+    // });
+
+
+
+
+    // property(
+    //     "roll clicks should always be less than three"
+    // )
+
+    // property(
+    //     "if dice are in reverse order, the outcome is the same",
+    //     [dice_input],
+    //     function (input_dice) {
+    //         var dice1= input_dice.map(x=>x);
+    //         var dice2= input_dice.reverse();
+
+    //         return (dice1.reverse()===dice2);
+    //     }
+    // );
 
 
     // property(

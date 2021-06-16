@@ -1,5 +1,6 @@
 import Ajax from "./ajax.js";
 import SCC from "./scc_game.js";
+import Total from "./total.js";
 
 
 // create UI object to call from main file
@@ -117,14 +118,17 @@ UI.init = function () {
     };
 
     Game.end_turn= function(player) {
-        console.log ("Your Score is "+ SCC.total(player))
+        console.log ("Your Score is "+ Total.total(player))
         if (player.length==2); {
             roll_info.innerHTML = (
-            "Your Score is "+ String(SCC.total(player))+
+            "Your Score is "+ String(Total.total(player))+
             ", Click to Play again");
             roll_count.innerHTML = "End of Turn";
         };
+    }
 
+    Game.roll_counter= function(roll_clicks) {
+        return roll_clicks
     }
 };
 
