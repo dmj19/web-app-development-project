@@ -25,7 +25,7 @@ describe("Ship Captain Crew rules", function () {
     );
 
     it("If no score is entered into total, play isn't detected ", function () {
-        if (Total.total(0) !== 0) {
+        if (Total.total([0]) !== 0) {
             throw "Play input isn't detected, Try input again";
         }
     });
