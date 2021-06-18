@@ -23,5 +23,4 @@ describe("Ship Captain Crew rules", function () {
     );
 
 });
-    // if dice are in a different order, the outcome is the same
 

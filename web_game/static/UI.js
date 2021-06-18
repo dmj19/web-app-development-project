@@ -29,8 +29,10 @@ UI.init = function () {
     /* Waiting Keypress returns a promise that upon key press of
     R, the event listener is removed. This allowd the async function
     to be utilised  */
+
+    // NOTE: Jslint throws errors dure to dislike of async/keypress functions
     function waitingKeypress() {
-        return new Promise((resolve) => {
+        return new Promise((resolve) => { 
           document.addEventListener("keydown", onKeyHandler);
           function onKeyHandler(e) {
             if (e.keyCode === 82) {
@@ -50,27 +52,21 @@ UI.init = function () {
         player are displayed on screen*/
         console.log("waiting keypress..");
         await waitingKeypress();
-        console.log(player);
-        console.log(player.length);
         Game.play_game(player);
-        console.log("good job!");
     };
 
      /* Play Game runs through one dice-roll of game play. It then returns
      the adapted dice roll of the play once the roll has been completed (see
     SCC_game file for definitions of functions) */
     Game.play_game= function(player) {
-        console.log(player);
         roll_clicks += 1;
         // adds a roll count
         roll_info.innerHTML = "Press R to Re-roll";
         player = SCC.diceroll(player.length);
         /* produces a randomised dice roll assigned to the dice images
         with the number of dice required for the round */
-        console.log(player);
         SCC.update_number(player);
         SCC.filter(player);
-        console.log(player);
 
         if (player.length==2){
           Game.end_turn(player);
@@ -80,16 +76,18 @@ UI.init = function () {
     return player;
     };
 
-
+     /* roll button on click starts the intial first round. It resets the roll
+     number and displays the number of turns. It runs an Ajax function and
+     calls the PlayGame fucntion */
 
     roll_button.onclick = function () {
         roll_clicks = 0;
         button_heading_count(player);
         var player = new Array(5);
-          // roll_clicks += 1;
-          // button_heading_count();
-        console.log(composition.value);
-
+        /* The Ajax function takes in the html value of the user's text
+        box input and then calls a function on the response object to
+        change the HTML of the Score board to the input + an appended
+        message*/
         Ajax.query({
             "message": composition.value
         }).then(function (responseObj) {
@@ -100,7 +98,9 @@ UI.init = function () {
     };
 
 
-
+    /* button heading count checks the number of presses of R
+    and changes the HTML to aloow for this. If there are 3 r presses,
+    end turn is called*/
     const button_heading_count = function (player) {
         if (roll_clicks === (0)) {
             roll_count.innerHTML = "3 rolls left";
@@ -117,8 +117,10 @@ UI.init = function () {
         }
     };
 
+    /* The end_turn function takes in the players final dice
+    value and returns the score. If the player's hand is more than 2 dice,
+    they haven't succeeded and their score is set to 0 */
     Game.end_turn= function(player) {
-        console.log ("Your Score is "+ Total.total(player))
         if (player.length==2); {
             roll_info.innerHTML = (
             "Your Score is "+ String(Total.total(player))+
@@ -127,9 +129,6 @@ UI.init = function () {
         };
     }
 
-    Game.roll_counter= function(roll_clicks) {
-        return roll_clicks
-    }
 };
 
 export default Object.freeze(UI,Game);

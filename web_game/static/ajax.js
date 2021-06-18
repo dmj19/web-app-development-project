@@ -19,11 +19,12 @@ Ajax.query = function (requestObj) {
 
 export default Object.freeze(Ajax);
 
+// Initial Ajax Method idea:m
 
 // return Promise.resolve({
 //     { "message": my_message_text}
-// { "name-collection": "Daisy's Collection"}
+// { "name-collection": "Daisy's Score"}
 // })
-    // {"response": my_message_text + "'s Collection"}
+    // {"response": my_message_text + "'s Score"}
 // { "input-name": "Daisy"}
-// { "name-collection": "Daisy's Collection"}
+// { "name-collection": "Daisy's Score"}

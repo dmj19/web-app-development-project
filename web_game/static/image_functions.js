@@ -28,7 +28,6 @@ ressasigned as a blue dice with a picture. */
 
 Image.ship_images = function () {
     search_ship.innerHTML = "FOUND SHIP!";
-    console.log("You've found a Ship!");
     fifth_dice.setAttribute("src", "dice_images/blue_six.png");
     // The blue dice don't get reassigned once they are found as array slices
     ship_pic.setAttribute("src", "dice_images/ship.png");
@@ -36,14 +35,12 @@ Image.ship_images = function () {
 
 Image.captain_images = function () {
     search_captain.innerHTML = "FOUND CAPTAIN!";
-    console.log("You've found a Captain!");
     fourth_dice.setAttribute("src", "dice_images/blue_five.png");
     captain_pic.setAttribute("src", "dice_images/captain.png");
 };
 
 Image.crew_images = function () {
     search_crew.innerHTML = "FOUND CREW - SET SAIL!!";
-    console.log("You've found a Crew!");
     third_dice.setAttribute("src", "dice_images/blue_four.png");
     crew_pic.setAttribute("src", "dice_images/crew.png");
 };

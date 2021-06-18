@@ -1,5 +1,6 @@
 const Total = Object.create(null);
 
+/* This file is separate to allow easy testing through Mocha  */
 
 /* The total function takes in the final 2 dice numbers if
 user wins, and returns the sum of the roll  */

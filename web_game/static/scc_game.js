@@ -19,15 +19,12 @@ var id_names = {
  names, each assigned wtih a random dice roll */
 SCC.update_six = function(num){
   id_names= {};
-  console.log(num);
   for (let i=1;i<num+1;i++){
     const random_int = Math.floor(Math.random() * 6) + 1;
     // produces Dice roll from 1 to 6
     id_names["image".concat(i.toString())] = random_int;
-    console.log(random_int);
     };
     // assigns a dice roll to a new name "image_num"
-  console.log(id_names);
 return id_names
 // returns an object of image names and dice values
 };
@@ -36,9 +33,7 @@ return id_names
 update six function. Redefining id_names allows the
 return of the object's values in ascending order */
 SCC.diceroll = function(num) {
-  console.log(num);
   id_names=SCC.update_six(num);
-  console.log(Object.values(id_names).sort());
   return Object.values(id_names).sort();
   // returns an array of dice roll numbers in ascending order
 };
@@ -47,7 +42,6 @@ SCC.diceroll = function(num) {
 and reassigns the correct dice roll image to it so client views the
 updated roll */
 SCC.update_number = function(dicerollNumbers) {
-  console.log(dicerollNumbers)
   for (let i=0; i<(dicerollNumbers.length); i++){
     /* for loop is iterated through the new length of the array
     which changes every round */
@@ -56,7 +50,6 @@ SCC.update_number = function(dicerollNumbers) {
       // images taken from dice image file
   };
 // new dice images display on screen
-console.log(dicerollNumbers.length);
 };
 
 

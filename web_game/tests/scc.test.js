@@ -4,7 +4,6 @@ import property from "./property.js";
 
 
 const rand_dice= fc.uint8Array({min: 1, max: 6, minLength: 2, maxLength: 5});
-const dice_input= fc.uint8Array({min: 1, max: 6, minLength: 5, maxLength: 5});
 
 // Object.values()
 
@@ -29,50 +28,8 @@ describe("Ship Captain Crew rules", function () {
             throw "Play input isn't detected, Try input again";
         }
     });
-    // });
 
-
-
-
-    // property(
-    //     "roll clicks should always be less than three"
-    // )
-
-    // property(
-    //     "if dice are in reverse order, the outcome is the same",
-    //     [dice_input],
-    //     function (input_dice) {
-    //         var dice1= input_dice.map(x=>x);
-    //         var dice2= input_dice.reverse();
-
-    //         return (dice1.reverse()===dice2);
-    //     }
-    // );
-
-
-    // property(
-    //     "two inital dice rolls shouldn't be the same",
-    //     [final_score],
-    //     function (score_total) {
-    //         const round= score_total.flat();
-
-    //         return (
-    //             (round <= 12)
-    //         );
-    //     }
-    // );
-
-    // "if dice are in a different order, the outcome is the same"
 });
-    // if dice are in a different order, the outcome is the same
 
 
 
-
-
-
-
-//     // test length >2
-
-//     ""
-// // }
