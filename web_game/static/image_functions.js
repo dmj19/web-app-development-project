@@ -3,6 +3,9 @@ const Image = Object.create(null);
 /*  returning element object representing the element
 whose id property matches the specified string */
 
+/* The image function file changes the icons on the screen upon
+succesful rolls*/
+
 const el = (id) => document.getElementById(id);
 
 
